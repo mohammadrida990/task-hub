@@ -36,13 +36,13 @@ const Header = ({
     onWorkspaceSelected(workspace);
     const location = window.location;
 
-    // if (isOnWorkspacePage) {
-    //   navigate(`/workspaces/${workspace._id}`);
-    // } else {
-    //   const basePath = location.pathname;
+    if (isOnWorkspacePage) {
+      navigate(`/workspaces/${workspace._id}`);
+    } else {
+      const basePath = location.pathname;
 
-    //   navigate(`${basePath}?workspaceId=${workspace._id}`);
-    // }
+      navigate(`${basePath}?workspaceId=${workspace._id}`);
+    }
   };
 
   return (
