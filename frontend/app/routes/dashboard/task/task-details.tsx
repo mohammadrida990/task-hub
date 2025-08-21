@@ -146,7 +146,7 @@ const TaskDetails = () => {
       </div>
 
       <div className="flex lg:flex-row flex-col gap-6">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 w-full lg:w-3/4">
           <div className="bg-card shadow-sm mb-6 p-6 rounded-lg">
             <div className="flex md:flex-row flex-col justify-between items-start mb-4">
               <div>
@@ -213,7 +213,7 @@ const TaskDetails = () => {
         </div>
 
         {/* right side */}
-        <div className="w-full">
+        <div className="w-auto">
           <Watchers watchers={task.watchers || []} />
 
           <TaskActivity resourceId={task._id} />

@@ -1,5 +1,6 @@
 import { recordActivity } from "../libs/index.js";
 import ActivityLog from "../models/activity.js";
+import Comment from "../models/comment.js";
 import Project from "../models/project.js";
 import Task from "../models/task.js";
 import Workspace from "../models/workspace.js";
@@ -619,7 +620,7 @@ const achievedTask = async (req, res) => {
 
     // record activity
     await recordActivity(req.user._id, "updated_task", "Task", taskId, {
-      description: `${isAchieved ? "unachieved" : "achieved"} task ${
+      description: `${isAchieved ? "unarchived" : "achieved"} task ${
         task.title
       }`,
     });
