@@ -26,6 +26,7 @@
     "zod-express-middleware": "^1.4.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
     "nodemon": "^3.1.10"
   }
 }

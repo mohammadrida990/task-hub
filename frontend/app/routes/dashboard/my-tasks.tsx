@@ -22,7 +22,7 @@ import { useGetMyTasksQuery } from "@/hooks/use-task";
 import type { Task } from "@/types";
 import { format } from "date-fns";
 import { ArrowUpRight, CheckCircle, Clock, FilterIcon } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router";
 
 const MyTasks = () => {
@@ -131,7 +131,7 @@ const MyTasks = () => {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant={"outline"}>
+              <Button variant="outline">
                 <FilterIcon className="w-4 h-4" /> Filter
               </Button>
             </DropdownMenuTrigger>
@@ -240,7 +240,7 @@ const MyTasks = () => {
                             )}
 
                             {task.isArchived && (
-                              <Badge variant={"outline"}>Archived</Badge>
+                              <Badge variant="outline">Archived</Badge>
                             )}
                           </div>
                         </div>
@@ -281,7 +281,7 @@ const MyTasks = () => {
               <CardHeader>
                 <CardTitle className="flex justify-between items-center">
                   To Do
-                  <Badge variant={"outline"}>{todoTasks?.length}</Badge>
+                  <Badge variant="outline">{todoTasks?.length}</Badge>
                 </CardTitle>
               </CardHeader>
 
