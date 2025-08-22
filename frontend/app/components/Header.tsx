@@ -30,7 +30,7 @@ const Header = ({
 
   const { user, logout } = useAuth();
   const { workspaces } = useLoaderData() as { workspaces: Workspace[] };
-  const isOnWorkspacePage = useLocation().pathname.includes("/workspace");
+  const isOnWorkspacePage = useLocation().pathname.includes("/workspaces");
 
   const handleOnClick = (workspace: Workspace) => {
     onWorkspaceSelected(workspace);
@@ -103,7 +103,7 @@ const Header = ({
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="p-1 border rounded-full w-8 h-8">
+              <button className="flex justify-center items-center p-1 border rounded-full w-8 h-8">
                 <Avatar className="w-8 h-8">
                   <AvatarImage src={user?.profilePicture} alt={user?.name} />
 
